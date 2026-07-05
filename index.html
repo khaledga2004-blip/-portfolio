@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عبدالرحمن الحميري | مصمم أنظمة ومواقع ويب</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* {margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth;}
+body {font-family:'Cairo', sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8;}
+header {background:linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color:white; padding:100px 20px; text-align:center;}
+header h1 {font-size:48px; font-weight:900; margin-bottom:15px;}
+header p {font-size:22px; margin-bottom:30px; opacity:0.9;}
+.btn {background:white; color:#1e40af; padding:15px 35px; text-decoration:none; border-radius:12px; font-weight:bold; font-size:18px; transition:0.3s; display:inline-block;}
+.btn:hover {transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+section {padding:80px 20px; max-width:1200px; margin:auto;}
+h2 {font-size:36px; color:#1e40af; text-align:center; margin-bottom:50px; font-weight:900;}
+.services {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;}
+.card {background:white; padding:40px 30px; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,0.08); text-align:center; transition:0.3s; border-top:4px solid #3b82f6;}
+.card:hover {transform:translateY(-10px);}
+.card-icon {font-size:50px; margin-bottom:20px;}
+.card h3 {color:#1e40af; font-size:24px; margin-bottom:15px;}
+.portfolio {display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:30px;}
+.work {background:white; border-radius:20px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,0.1); transition:0.4s;}
+.work:hover {transform:scale(1.03);}
+.work img {width:100%; height:250px; object-fit:cover;}
+.work-info {padding:25px;}
+.work-info h3 {color:#1e40af; font-size:22px; margin-bottom:10px;}
+.badge {background:#dbeafe; color:#1e40af; padding:5px 15px; border-radius:20px; font-size:14px; font-weight:bold; display:inline-block; margin-top:10px;}
+.about {text-align:center; background:white; border-radius:20px; padding:50px 30px; box-shadow:0 5px 20px rgba(0,0,0,0.08);}
+.features {display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:30px;}
+.feature {font-size:18px;}
+.contact {background:linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color:white; text-align:center; border-radius:20px; padding:60px 30px;}
+.contact a {color:white; text-decoration:none; font-size:22px; font-weight:bold;}
+footer {background:#0f172a; color:white; text-align:center; padding:30px 20px;}
+
+/* تصميم لوحة التحكم العامة */
+.system-card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.12);transition:0.3s;}
+.system-card:hover{transform:translateY(-8px);}
+.sys-header{color:white;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;font-weight:bold;font-size:15px;}
+.sys-body{display:flex;height:380px;}
+.sys-sidebar{width:40%;color:white;padding:20px 0;}
+.sys-sidebar h3{text-align:center;font-size:19px;margin-bottom:20px;}
+.sys-sidebar ul{list-style:none;}
+.sys-sidebar ul li{padding:13px 20px;font-size:15px;cursor:pointer;transition:0.2s;}
+.sys-sidebar ul li:hover{padding-right:25px;}
+.sys-content{flex:1;background:#f8fafc;padding:20px;overflow-y:auto;}
+.stat-boxes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:15px;}
+.stat{background:white;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.stat h4{font-size:13px;color:#64748b;margin-bottom:5px;}
+.stat p{font-size:22px;font-weight:900;color:#1e40af;}
+.table{background:white;border-radius:10px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.table h4{margin-bottom:10px;color:#1e40af;font-size:16px;}
+.table-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #e2e8f0;font-size:14px;}
+.info{padding:20px;}
+.info h3{color:#1e40af;font-size:22px;margin-bottom:8px;}
+.info p{color:#475569;margin-bottom:12px;}
+.badge{display:inline-block;background:#dbeafe;color:#1e40af;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:bold;}
+
+/* ألوان النظام 1: عيادة - أزرق */
+.clinic .sys-header{background:#1e40af;}
+.clinic .sys-sidebar{background:#1e3a8a;}
+.clinic .sys-sidebar ul li:hover{background:#2563eb;}
+
+/* ألوان النظام 2: مبيعات - أخضر */
+.sales .sys-header{background:#059669;}
+.sales .sys-sidebar{background:#047857;}
+.sales .sys-sidebar ul li:hover{background:#10b981;}
+.sales .stat p{color:#059669;}
+
+/* ألوان النظام 3: مدرسة - برتقالي */
+.school .sys-header{background:#ea580c;}
+.school .sys-sidebar{background:#c2410c;}
+.school .sys-sidebar ul li:hover{background:#f97316;}
+.school .stat p{color:#ea580c;}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>عبدالرحمن خالد الحميري</h1>
+    <p>مصمم ومطور أنظمة مواقع ويب كاملة احترافية</p>
+    <a href="https://wa.me/967778393653" class="btn" target="_blank">اطلب موقعك الآن</a>
+</header>
+
+<section>
+    <h2>الخدمات التي أقدمها</h2>
+    <div class="services">
+        <div class="card">
+            <div class="card-icon">🌐</div>
+            <h3>تصميم مواقع شركات</h3>
+            <p>موقع تعريفي احترافي يعرض شركتك بأفضل صورة ويزيد ثقة العملاء بك</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🛒</div>
+            <h3>متاجر إلكترونية</h3>
+            <p>متجر ووردبريس متكامل لبيع منتجاتك أونلاين مع الدفع والتوصيل وإدارة الطلبات</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">💻</div>
+            <h3>تطوير أنظمة ويب</h3>
+            <p>أنظمة خاصة HTML, CSS, JavaScript لإدارة المبيعات والفواتير والعملاء</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section>
+    <h2>معرض أعمالي - أنظمة كاملة</h2>
+    <div class="grid">
+        
+        <!-- نظام 1: عيادة -->
+        <div class="system-card clinic">
+            <div class="sys-header">
+                <span>الرئيسية</span>
+                <span>نظام إدارة عيادة</span>
+            </div>
+            <div class="sys-body">
+                <div class="sys-sidebar">
+                    <h3>نظام عيادة</h3>
+                    <ul>
+                        <li>الرئيسية</li>
+                        <li>المرضى</li>
+                        <li>الأطباء</li>
+                        <li>المواعيد</li>
+                        <li>الخدمات</li>
+                        <li>الفواتير</li>
+                        <li>التقارير</li>
+                        <li>الإعدادات</li>
+                        <li>تسجيل الخروج</li>
+                    </ul>
+                </div>
+                <div class="sys-content">
+                    <div class="stat-boxes">
+                        <div class="stat"><h4>إجمالي المرضى</h4><p>245</p></div>
+                        <div class="stat"><h4>مواعيد اليوم</h4><p>18</p></div>
+                        <div class="stat"><h4>إيرادات الشهر</h4><p>32,500</p></div>
+                        <div class="stat"><h4>الأطباء</h4><p>8</p></div>
+                    </div>
+                    <div class="table">
+                        <h4>آخر المواعيد</h4>
+                        <div class="table-row"><span>أحمد محمد</span><span>10:00 ص</span></div>
+                        <div class="table-row"><span>فاطمة علي</span><span>11:30 ص</span></div>
+                        <div class="table-row"><span>خالد سالم</span><span>12:00 ظ</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <h3>نظام إدارة عيادة طبية</h3>
+                <p>نظام متكامل لإدارة المرضى والمواعيد والفواتير والتقارير الطبية</p>
+                <span class="badge">HTML, CSS, JavaScript</span>
+            </div>
+        </div>
+
+        <!-- نظام 2: مبيعات -->
+        <div class="system-card sales">
+            <div class="sys-header">
+                <span>الرئيسية</span>
+                <span>نظام إدارة مبيعات</span>
+            </div>
+            <div class="sys-body">
+                <div class="sys-sidebar">
+                    <h3>نظام مبيعات</h3>
+                    <ul>
+                        <li>الرئيسية</li>
+                        <li>المنتجات</li>
+                        <li>العملاء</li>
+                        <li>الموردين</li>
+                        <li>المبيعات</li>
+                        <li>المشتريات</li>
+                        <li>المخزون</li>
+                        <li>التقارير</li>
+                        <li>تسجيل الخروج</li>
+                    </ul>
+                </div>
+                <div class="sys-content">
+                    <div class="stat-boxes">
+                        <div class="stat"><h4>إجمالي المبيعات</h4><p>128,400</p></div>
+                        <div class="stat"><h4>المنتجات</h4><p>560</p></div>
+                        <div class="stat"><h4>العملاء</h4><p>320</p></div>
+                        <div class="stat"><h4>فواتير اليوم</h4><p>24</p></div>
+                    </div>
+                    <div class="table">
+                        <h4>آخر المبيعات</h4>
+                        <div class="table-row"><span>فاتورة #1024</span><span>5,200 ريال</span></div>
+                        <div class="table-row"><span>فاتورة #1023</span><span>3,800 ريال</span></div>
+                        <div class="table-row"><span>فاتورة #1022</span><span>7,100 ريال</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <h3>نظام إدارة مبيعات ومخزون</h3>
+                <p>نظام لإدارة المبيعات والمشتريات والمخزون وطباعة الفواتير وتقارير الأرباح</p>
+                <span class="badge">JavaScript, PHP</span>
+            </div>
+        </div>
+
+        <!-- نظام 3: مدرسة -->
+        <div class="system-card school">
+            <div class="sys-header">
+                <span>الرئيسية</span>
+                <span>نظام إدارة مدرسة</span>
+            </div>
+            <div class="sys-body">
+                <div class="sys-sidebar">
+                    <h3>نظام مدرسة</h3>
+                    <ul>
+                        <li>الرئيسية</li>
+                        <li>الطلاب</li>
+                        <li>المعلمين</li>
+                        <li>الصفوف</li>
+                        <li>الجداول</li>
+                        <li>الدرجات</li>
+                        <li>الرسوم</li>
+                        <li>التقارير</li>
+                        <li>تسجيل الخروج</li>
+                    </ul>
+                </div>
+                <div class="sys-content">
+                    <div class="stat-boxes">
+                        <div class="stat"><h4>إجمالي الطلاب</h4><p>1,240</p></div>
+                        <div class="stat"><h4>المعلمين</h4><p>65</p></div>
+                        <div class="stat"><h4>الصفوف</h4><p>36</p></div>
+                        <div class="stat"><h4>الرسوم المحصلة</h4><p>890,000</p></div>
+                    </div>
+                    <div class="table">
+                        <h4>آخر الإضافات</h4>
+                        <div class="table-row"><span>طالب جديد</span><span>الصف الأول</span></div>
+                        <div class="table-row"><span>معلم جديد</span><span>رياضيات</span></div>
+                        <div class="table-row"><span>جدول اختبارات</span><span>تم النشر</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <h3>نظام إدارة مدرسة</h3>
+                <p>نظام لإدارة الطلاب والمعلمين والدرجات والجداول والرسوم الدراسية</p>
+                <span class="badge">HTML, CSS</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <div class="about">
+        <h2>لماذا تختارني؟</h2>
+        <p style="font-size:18px; max-width:700px; margin:auto;">أنا عبدالرحمن، مطور مواقع من اليمن. أركز على تقديم مواقع سريعة، أنيقة، وتجيب لك عملاء فعلاً. أشتغل معك خطوة بخطوة لحد ما تكون راضي 100%</p>
+        <div class="features">
+            <div class="feature">✅ تسليم خلال 7 أيام</div>
+            <div class="feature">✅ دعم فني مجاني</div>
+            <div class="feature">✅ تصميم متجاوب</div>
+            <div class="feature">✅ أسعار مناسبة</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="contact">
+        <h2>جاهز نبدأ مشروعك؟</h2>
+        <p style="font-size:18px; margin:20px 0;">تواصل معي واتساب الآن ونناقش فكرتك</p>
+        <a href="https://wa.me/967778393653" target="_blank">📱 778393653</a>
+        <p style="margin-top:20px;">صنعاء - اليمن</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 جميع الحقوق محفوظة | عبدالرحمن الحميري</p>
+</footer>
+
+</body>
+</html>
